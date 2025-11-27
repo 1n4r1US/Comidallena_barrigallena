@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Comida Llena</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Visual Side -->
+            <div class="auth-visual">
+                <img src="../img/logo.png" alt="Logo" class="auth-visual-logo">
+                <h2>¡Bienvenido de vuelta!</h2>
+                <p>Inicia sesión para crear y compartir tus recetas favoritas con la comunidad</p>
+            </div>
+
+            <!-- Form Side -->
+            <div class="auth-form-container">
+                <div class="auth-form-header">
+                    <h1>Iniciar Sesión</h1>
+                    <p>Ingresa tus credenciales para continuar</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label required">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label required">Contraseña</label>
+                        <div class="password-toggle">
+                            <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <div class="form-check">
+                            <input type="checkbox" id="remember" name="remember" class="form-check-input">
+                            <label for="remember" class="form-check-label">Recordarme</label>
+                        </div>
+                        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                    </button>
+                </form>
+
+                <div class="auth-form-footer">
+                    <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+                    <p><a href="../index.html">← Volver al inicio</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Comida Llena</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Visual Side -->
+            <div class="auth-visual">
+                <div class="auth-visual-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h2>Únete a nuestra comunidad</h2>
+                <p>Crea una cuenta y comienza a compartir tus recetas favoritas con miles de usuarios</p>
+            </div>
+
+            <!-- Form Side -->
+            <div class="auth-form-container">
+                <div class="auth-form-header">
+                    <h1>Crear Cuenta</h1>
+                    <p>Completa el formulario para registrarte</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label required">Nombre Completo</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Juan Pérez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="form-label required">Nombre de Usuario</label>
+                        <input type="text" id="username" name="username" class="form-input" placeholder="juanperez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label required">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label required">Contraseña</label>
+                        <div class="password-toggle">
+                            <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="password-strength-bar"></div>
+                        </div>
+                        <div class="password-strength-text"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label required">Confirmar Contraseña</label>
+                        <div class="password-toggle">
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-user-plus"></i> Crear Cuenta
+                    </button>
+                </form>
+
+                <div class="auth-form-footer">
+                    <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                    <p><a href="../index.html">← Volver al inicio</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

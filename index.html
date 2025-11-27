@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Hecha con Amor y Sabor - Recetas Deliciosas</title>
+    <meta name="description" content="Descubre y comparte recetas deliciosas creadas con amor y sabor. Encuentra recetas de todas partes del mundo.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/recipes.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background: linear-gradient(90deg, var(--primary-pink), var(--primary-pink-light)); color: white; flex-wrap: wrap; gap: var(--space-md);">
+        <div style="display: flex; align-items: center; gap: var(--space-md);">
+            <img src="img/logo.png" alt="Logo" style="width: 60px; height: 60px; border-radius: var(--radius-md);">
+            <h1 style="font-size: var(--font-size-xl); margin: 0;">Comida Llena, Barriga Llena</h1>
+        </div>
+
+        <nav style="display: flex; align-items: center; gap: var(--space-lg);">
+            <a href="index.html" style="color: white; font-weight: var(--font-weight-semibold);">Inicio</a>
+            <a href="#recetas" style="color: white; font-weight: var(--font-weight-semibold);">Recetas</a>
+            <a href="pages/login.html" class="btn btn-secondary" style="border-color: white; color: white;">
+                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+            </a>
+            <button class="dark-mode-toggle" style="background: rgba(255,255,255,0.2); border: 2px solid white;">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <h1>¿QUÉ TE GUSTARÍA COCINAR?</h1>
+            <p>Descubre recetas de todas partes creadas por diferentes personas con un sazón exquisito</p>
+            <div class="search-bar-large">
+                <input type="text" id="searchInput" placeholder="Buscar recetas, ingredientes...">
+                <button type="button">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <div class="container">
+        <div class="filters-container">
+            <select id="categoryFilter" class="filter-select">
+                <option value="">Todas las categorías</option>
+                <option value="Mexicana">Mexicana</option>
+                <option value="Italiana">Italiana</option>
+                <option value="Postres">Postres</option>
+                <option value="Ensaladas">Ensaladas</option>
+                <option value="Sopas">Sopas</option>
+            </select>
+            
+            <select id="difficultyFilter" class="filter-select">
+                <option value="">Todas las dificultades</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Intermedia">Intermedia</option>
+                <option value="Difícil">Difícil</option>
+            </select>
+            
+            <select id="timeFilter" class="filter-select">
+                <option value="">Cualquier tiempo</option>
+                <option value="30">Menos de 30 min</option>
+                <option value="60">Menos de 1 hora</option>
+                <option value="120">Menos de 2 horas</option>
+            </select>
+            
+            <button id="clearFilters" class="filter-clear">
+                <i class="fas fa-times"></i> Limpiar filtros
+            </button>
+        </div>
+    </div>
+
+    <!-- Recipes Grid -->
+    <div class="container" id="recetas">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xl);">
+            <h2 style="font-size: var(--font-size-3xl); margin: 0;">Recetas Destacadas</h2>
+            <a href="pages/login.html" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Crear Receta
+            </a>
+        </div>
+        
+        <div class="recipes-grid" id="recipesGrid">
+            <!-- Recipes will be loaded by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--bg-secondary); padding: var(--space-3xl) var(--space-lg); margin-top: var(--space-3xl); text-align: center;">
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: var(--space-xl); margin-bottom: var(--space-xl); flex-wrap: wrap;">
+                <a href="https://wa.me/" target="_blank" style="color: var(--text-primary); font-size: var(--font-size-2xl);">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" style="color: var(--text-primary); font-size: var(--font-size-2xl);">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/" target="_blank" style="color: var(--text-primary); font-size: var(--font-size-2xl);">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <p style="color: var(--text-secondary); margin: 0;">
+                &copy; 2025 Comida Llena, Barriga Llena. Hecho con <i class="fas fa-heart" style="color: var(--primary-pink);"></i>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/recipes.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
